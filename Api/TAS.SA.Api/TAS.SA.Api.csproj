@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App"/>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.3"/>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0"/>
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="4.0.1"/>
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="4.0.1"/>
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="4.0.1"/>
+    <PackageReference Include="EasyNetQ" Version="3.4.5"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infra\TAS.SA.Infra\TAS.SA.Infra.csproj"/>
+    <ProjectReference Include="..\..\Dominio\TAS.SA.Dominio\TAS.SA.Dominio.csproj"/>
+  </ItemGroup>
+</Project>
