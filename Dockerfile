@@ -13,6 +13,8 @@ RUN dotnet build "TAS.SA.Api.csproj" -c Release -o /app
 FROM build AS publish
 RUN dotnet publish "TAS.SA.Api.csproj" -c Release -o /app
 
+ENV ASPNETCORE_URLS http://*:8080
+
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
